@@ -21,13 +21,13 @@ public class TestAdministrador {
 	public void testGetInstance() {
 		
 		admin = Administrador.getInstance();
-		Assert.assertEquals(null, admin);
+		Assert.assertNotEquals(null, admin);
 		
 	}
 
 	@Test
 	public void testGetInstance2() {
-		
+		admin = Administrador.getInstance();
 		Administrador adminTest = Administrador.getInstance();		
 		Assert.assertEquals(adminTest, admin);
 	}
